@@ -1,12 +1,13 @@
 {
   "scripts": {
-    "start": "node index.js",
-    "dev" : "nodemon",
+    "start": "node -r esm index.js",
+    "dev": "nodemon -r esm",
     "deploy": " git push heroku master",
     "test": "cd frontend && yarn test -- --coverage",
     "heroku-postbuild": "cd frontend && yarn && yarn run build"
   },
   "dependencies": {
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "path": "^0.12.7"
   },
