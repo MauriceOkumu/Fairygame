@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "heroku-postbuild": "cd frontend && yarn && yarn run build"
   },
   "dependencies": {
     "express": "^4.17.1",
