@@ -8,6 +8,6 @@ it('renders without crashing', () => {
   unmountComponentAtNode(div);
 });
 
-it('renders a page', (y) => {
+it('renders a page', () => {
   
 })
