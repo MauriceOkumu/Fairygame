@@ -7,3 +7,7 @@ it('renders without crashing', () => {
   render(<Login />, div);
   unmountComponentAtNode(div);
 });
+
+it('renders a page', (y) => {
+  
+})
