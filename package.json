@@ -1,6 +1,8 @@
 {
   "scripts": {
     "start": "node index.js",
+    "dev" : "nodemon",
+    "deploy": " git push heroku master",
     "test": "cd frontend && yarn test -- --coverage",
     "heroku-postbuild": "cd frontend && yarn && yarn run build"
   },
