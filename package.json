@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "cd frontend && yarn test -- --coverage",
     "heroku-postbuild": "cd frontend && yarn && yarn run build"
   },
