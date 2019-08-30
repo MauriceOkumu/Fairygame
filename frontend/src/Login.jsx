@@ -16,11 +16,6 @@ class Login extends Component  {
             'Accept': 'application/json'
            }
       })
-      .then(data => {
-
-          console.log('Data => ',data)
-          return data
-      })
       .then(values => {
         console.log('Values', values)
         this.setState({
