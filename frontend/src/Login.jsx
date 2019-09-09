@@ -20,6 +20,7 @@ class Login extends Component  {
             data:values.data
         })
       })
+      // console.log('Hurray', this)
     }
     render() {
         const { data } = this.state

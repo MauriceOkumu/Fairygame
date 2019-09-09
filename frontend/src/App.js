@@ -1,8 +1,17 @@
-import React from 'react';
+import React ,{ Component } from 'react';
 import Login from './Login'
 import './App.css';
 
-function App() {
+class App extends Component {
+  // console.log('Hurray', this)
+  constructor() {
+    super()
+  }
+  componentDidMount() {
+    // console.log('Hurray', this.children)
+  }
+  render() {
+    // console.log('Hurray', this)
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +27,7 @@ function App() {
       <Login />
     </div>
   );
+  }
 }
 
 export default App;

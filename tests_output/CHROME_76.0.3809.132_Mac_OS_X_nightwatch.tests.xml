@@ -5,9 +5,11 @@
 
   <testsuite name="nightwatch.tests"
     errors="0" failures="0" hostname="" id="" package="nightwatch.tests" skipped="0"
-    tests="1" time="1.364" timestamp="">
+    tests="1" time="1.398" timestamp="">
   
-    <testcase name="Fairy game Homepage" classname="nightwatch.tests" time="1.364" assertions="2">
+    <testcase name="In Dev Fairy-game Homepage" classname="nightwatch.tests" time="1.398" assertions="3">
+
+    
 
     
 
