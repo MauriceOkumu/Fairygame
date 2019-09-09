@@ -1,5 +1,6 @@
 import React from 'react';
 import  {render, unmountComponentAtNode} from 'react-dom';
+import { shallow , mount} from 'enzyme'
 import Login from '../Login';
 
 it('renders without crashing', () => {
@@ -9,5 +10,5 @@ it('renders without crashing', () => {
 });
 
 it('renders a page', () => {
-  
+  mount( <Login />)
 })

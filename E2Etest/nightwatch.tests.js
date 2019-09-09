@@ -1,15 +1,23 @@
 module.exports = {
     
-    'Demo test Google' : function (browser) {
+    // 'Demo test Google' : function (browser) {
+    //     browser
+    //       .url('https://www.google.com')
+    //       .waitForElementVisible('body')
+    //       .setValue('input[type=text]', 'nightwatch')
+    //       .waitForElementVisible('input[name=btnK]')
+    //       .click('input[name=btnK]')
+    //       .pause(1000)
+    //       .assert.containsText('#main', 'Night Watch')
+    //       .end();
+    //   },
+      'Fairy game Homepage' : function( browser) {
         browser
-          .url('https://www.google.com')
-          .waitForElementVisible('body')
-          .setValue('input[type=text]', 'nightwatch')
-          .waitForElementVisible('input[name=btnK]')
-          .click('input[name=btnK]')
-          .pause(1000)
-          .assert.containsText('#main', 'Night Watch')
-          .end();
+        .url('http://localhost:3000/')
+        .pause(1000)
+        .assert.containsText('#root', 'Fairly')
+        .assert.containsText('#root', 'Hello')
+        .end()
       }
 
   };

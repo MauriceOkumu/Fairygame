@@ -36,3 +36,7 @@ This command will deploy the app to heroku
 ### `nodemon`
 
 Will fire up the server for API integration
+
+### ` yarn endtoend` 
+
+Will run the end to end and sanity tests

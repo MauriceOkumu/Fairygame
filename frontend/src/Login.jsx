@@ -1,6 +1,5 @@
 import React , { Component }from 'react';
 import Axios from 'axios';
-// import axios from 'axios'
 
 class Login extends Component  {
     constructor() {
@@ -17,7 +16,6 @@ class Login extends Component  {
            }
       })
       .then(values => {
-        console.log('Values', values)
         this.setState({
             data:values.data
         })
