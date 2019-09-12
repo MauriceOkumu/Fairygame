@@ -69,7 +69,7 @@ class Login extends Component {
             <div className="container">
               <div>
               <div>{data.Name}</div>
-//               Hello
+               Hello
               </div>
                 <form onSubmit={ this.handleSubmit }>
                     <div className="form-group">
