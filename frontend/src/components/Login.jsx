@@ -32,7 +32,8 @@ class Login extends Component {
             email,
             password
         }
-        this.props.loginUser(user, this.props.history);
+        // this.props.loginUser(user, this.props.history);
+        console.log('This is the user =>', user)
     }
     componentDidMount() {
         // if(this.props.auth.isAuthenticated) {
@@ -49,7 +50,7 @@ class Login extends Component {
                       data:values.data
                   })
                 })
-                console.log('Hurray', this.state.data)
+                // console.log('Hurray', this.state.data)
     }
     componentWillReceiveProps(nextProps) {
         // if(nextProps.auth.isAuthenticated) {
@@ -67,10 +68,6 @@ class Login extends Component {
         console.log('Errors---->', errors)
         return (
             <div className="container">
-              <div>
-              <div>{data.Name}</div>
-               Hello
-              </div>
                 <form onSubmit={ this.handleSubmit }>
                     <div className="form-group">
                         <input type="email" placeholder="email" 

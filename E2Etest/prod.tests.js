@@ -6,7 +6,7 @@ module.exports = {
         .pause(1000)
         .assert.containsText('#root', 'Fairly')
         .assert.containsText('#root', 'Hello')
-        .expect.element('.Login').to.be.an('div');
+        .expect.element('.container').to.be.an('div');
         // .end()
         browser.end()
       }

@@ -1,7 +1,7 @@
 import React from 'react';
 import  {render, unmountComponentAtNode} from 'react-dom';
 import { shallow , mount} from 'enzyme'
-import Login from '../Login';
+import Login from '../components/Login';
 
 //Smoke test
 it('renders without crashing', () => {

@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="1">
+            tests="2">
 
   <testsuite name="nightwatch.tests"
     errors="0" failures="0" hostname="" id="" package="nightwatch.tests" skipped="0"
-    tests="1" time="1.414" timestamp="">
+    tests="2" time="3.803" timestamp="">
   
-    <testcase name="In Dev Fairy-game Homepage" classname="nightwatch.tests" time="1.414" assertions="3">
+    <testcase name="In Dev Fairy-game Homepage" classname="nightwatch.tests" time="1.438" assertions="2">
 
     
+
+    
+    </testcase>
+  
+    <testcase name="In Dev Fairy-game login page" classname="nightwatch.tests" time="2.365" assertions="2">
 
     
 
