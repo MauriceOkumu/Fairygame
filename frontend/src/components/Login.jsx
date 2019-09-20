@@ -1,9 +1,9 @@
 import Axios from 'axios';
 import React, { Component } from 'react';
 // import classnames from 'classnames';
-// import { bindActionCreators } from 'redux';
+import { bindActionCreators } from 'redux';
 // import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 // import { loginUser } from '../actions/authentication';
 
 class Login extends Component {
@@ -65,7 +65,7 @@ class Login extends Component {
 
     render() {
         const { errors , data} = this.state;
-        console.log('Errors---->', errors)
+        // console.log('Errors---->', errors)
         return (
             <div className="container">
                 <form onSubmit={ this.handleSubmit }>
@@ -102,12 +102,12 @@ class Login extends Component {
 //     errors: PropTypes.object.isRequired
 // }
 
-// const mapStateToProps = state => ({
-//     errors: state.errors,
-//     auth: state.auth
-// });
+const mapStateToProps = state => ({
+    errors: state.errors,
+    auth: state.auth
+});
 
-// const mapDispatchToProps = dispatch => bindActionCreators({loginUser}, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({name: 'Name'}, dispatch);
 
-export default Login
-// export default connect(mapStateToProps, mapDispatchToProps)(Login);
+// export default Login
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

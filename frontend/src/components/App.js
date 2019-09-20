@@ -3,19 +3,17 @@ import Routes from './Routes'
 import '../css/App.css';
 
 class App extends Component {
-  constructor() {
-    super()
-  }
+ 
   componentDidMount() {
     
   }
   render() {
 
   return (
-    <div className="App">
-      <h2>Welcome</h2>
+    <div>
+       <h2>Welcome</h2>
       <Routes />
-    </div>
+      </div>
   );
   }
 }

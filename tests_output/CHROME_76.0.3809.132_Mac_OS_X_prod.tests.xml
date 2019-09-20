@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="1">
+            tests="2">
 
   <testsuite name="prod.tests"
     errors="0" failures="0" hostname="" id="" package="prod.tests" skipped="0"
-    tests="1" time="1.553" timestamp="">
+    tests="2" time="3.796" timestamp="">
   
-    <testcase name="Deployed Fairy-game homepage" classname="prod.tests" time="1.553" assertions="3">
+    <testcase name="Deployed Fairy-game homepage" classname="prod.tests" time="1.502" assertions="1">
 
     
+    </testcase>
+  
+    <testcase name="Deployed Fairy-game login page" classname="prod.tests" time="2.294" assertions="2">
 
     
 
