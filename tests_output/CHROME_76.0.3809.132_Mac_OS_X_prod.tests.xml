@@ -5,14 +5,14 @@
 
   <testsuite name="prod.tests"
     errors="0" failures="0" hostname="" id="" package="prod.tests" skipped="0"
-    tests="2" time="3.796" timestamp="">
+    tests="2" time="22.12" timestamp="">
   
-    <testcase name="Deployed Fairy-game homepage" classname="prod.tests" time="1.502" assertions="1">
+    <testcase name="Deployed Fairy-game homepage" classname="prod.tests" time="19.85" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Deployed Fairy-game login page" classname="prod.tests" time="2.294" assertions="2">
+    <testcase name="Deployed Fairy-game login page" classname="prod.tests" time="2.265" assertions="2">
 
     
 
