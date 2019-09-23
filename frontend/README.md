@@ -40,3 +40,7 @@ Will fire up the server for API integration
 ### ` yarn endtoend` 
 
 Will run the end to end and sanity tests
+
+
+### ` yarn backtest` 
+Will run the db and model tests
