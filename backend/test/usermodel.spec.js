@@ -1,18 +1,6 @@
-import mongoose from 'mongoose';
 import User from '../Models'
-import  dbConfig from '../db'
 import assert from 'assert'
-
-mongoose.connect(dbConfig.DB,{
-    useNewUrlParser: true
-}).then (
-    ()=> {
-        console.log(`Connected to the database successfully`);
-    },
-    err => {
-        console.log(`Cannot establish a database connection`);
-    }
-)
+import './test_helper'
 
 describe('Create a new user', () => {
     it('Creates and saves a new user ', (done) => {
@@ -25,6 +13,16 @@ describe('Create a new user', () => {
         .then(() => {
             assert(!user.isNew)
             done();
+        })
+    })
+})
+
+describe('The created user exists in the database', () => {
+    it('Finds an existing user', (done) => {
+        User.findOne({ name: 'Maurice'})
+        .then((user) => {
+            assert(user.email === 'a@b.com')
+            done()
         })
     })
 })

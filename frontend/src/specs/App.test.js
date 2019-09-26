@@ -11,6 +11,5 @@ it('renders without crashing', () => {
 
 xit('renders the home page', () => {
   const wrapper = mount( <App />)
-//   console.log(wrapper.childern)
   expect(wrapper.children.length).toEqual(1)
 })

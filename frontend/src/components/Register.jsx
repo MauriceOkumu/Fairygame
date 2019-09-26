@@ -1,15 +1,16 @@
-import Axios from 'axios';
 import React, { Component } from 'react';
-import classnames from 'classnames';
-import { bindActionCreators } from 'redux';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { loginUser } from '../actions/authentication';
+import PropTypes from 'prop-types';
+import { bindActionCreators } from 'redux';
+import { registerUser } from '../actions/authentication';
+import classnames from 'classnames';
 
-class Login extends Component {
+
+class Register extends Component {
     constructor () {
         super();
         this.state = {
+            name: '',
             email: '',
             password: '',
             errors: {}
@@ -26,21 +27,17 @@ class Login extends Component {
     
     handleSubmit(e) {
         e.preventDefault();
-        const { email, password} = this.state;
+        const { name, email, password} = this.state;
         const user = {
+            name,
             email,
             password
         }
-        this.props.loginUser(user, this.props.history);
-    }
-    componentDidMount() {
-        if(this.props.auth.isAuthenticated) {
-            this.props.history.push('/');
-        }
+        this.props.registerUser(user, this.props.history);
     }
     componentWillReceiveProps(nextProps) {
         if(nextProps.auth.isAuthenticated) {
-            this.props.history.push('/');
+            this.props.history.push('/')
         }
         if(nextProps.errors) {
             this.setState({
@@ -48,25 +45,38 @@ class Login extends Component {
             })
         }
     }
+    componentDidMount() {
+        if(this.props.auth.isAuthenticated) {
+            this.props.history.push('/')
+        }
+    }
 
     render() {
-        const { errors } = this.state;
-        console.log('Errors---->', errors)
+        const { errors } = this.state; 
         return (
             <div className="container">
                 <form onSubmit={ this.handleSubmit }>
                     <div className="form-group">
-                        <input type="email" placeholder="email" 
+                        <input type="text" placeholder="name" name="name"
                         className={classnames('form-control form-control-lg', {
+                        'is-invalid': errors.name
+                       })}
+                      onChange ={this.handleInputChange }
+                         value={ this.state.name }  className="form-control"/>
+                         {errors.name && (<div classnames="invalid-feedback">{errors.name}</div>)}
+                    </div>
+                    <div className="form-group">
+                        <input type="email" placeholder="email" 
+                         className={classnames('form-control form-control-lg', {
                             'is-invalid': errors.email
                            })}
-                         onChange ={this.handleInputChange }
+                        onChange ={this.handleInputChange }
                          value={ this.state.email } name="email" className="form-control"/>
                          {errors.email && (<div classnames="invalid-feedback">{errors.email}</div>)}
                     </div>
                     <div className="form-group">
                         <input type="password" placeholder="password" 
-                        className={classnames('form-control form-control-lg', {
+                         className={classnames('form-control form-control-lg', {
                             'is-invalid': errors.password
                            })}
                         onChange ={this.handleInputChange }
@@ -74,7 +84,7 @@ class Login extends Component {
                          {errors.password && (<div classnames="invalid-feedback">{errors.password}</div>)}
                     </div>
                     <div className="form-group">
-                        <button type="submit" className="btn btn-primary">Login</button>
+                        <button type="submit" className="btn btn-primary">Register</button>
                     </div>    
                 </form>
             </div>
@@ -82,18 +92,15 @@ class Login extends Component {
     }
 }
 
-Login.propTypes = {
-    errors: PropTypes.object.isRequired,
-    auth: PropTypes.object.isRequired,
-    // errors: PropTypes.object.isRequired
+Register.propTypes = {
+    registerUser: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = state => ({
-    errors: state.errors,
-    auth: state.auth
+  errors: state.errors,
+  auth: state.auth
 });
 
-const mapDispatchToProps = dispatch => bindActionCreators({loginUser}, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({registerUser}, dispatch);
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps,mapDispatchToProps)(Register);
