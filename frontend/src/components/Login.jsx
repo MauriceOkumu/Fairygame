@@ -1,4 +1,3 @@
-import Axios from 'axios';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { bindActionCreators } from 'redux';
