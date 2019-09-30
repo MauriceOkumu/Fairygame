@@ -23,9 +23,5 @@ if(process.env.NODE_ENV === 'production') {
         res.sendfile(path.join(__dirname +'../frontend/build/index.html'))
     })
 }
-app.get('/',(req, res) => {
-    res.send('Hello')
-})
-
 
 export default app;
