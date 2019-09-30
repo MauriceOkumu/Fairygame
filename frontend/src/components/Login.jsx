@@ -50,7 +50,6 @@ class Login extends Component {
 
     render() {
         const { errors } = this.state;
-        console.log('Errors---->', errors)
         return (
             <div className="container">
                 <form onSubmit={ this.handleSubmit }>
