@@ -44,3 +44,5 @@ Will run the end to end and sanity tests
 
 ### ` yarn backtest` 
 Will run the db and model tests
+
+Make sure monodb is up and running in local for API intergration
