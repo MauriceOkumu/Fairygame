@@ -12,7 +12,7 @@ module.exports = {
         browser
         .url('https://fairy-game.herokuapp.com')
         .pause(1000)
-        // .assert.containsText('#root', 'Login')
+        .assert.containsText('#root', 'Login')
         .expect.element('body').to.be.present.before(1000);
         browser.end()
       },

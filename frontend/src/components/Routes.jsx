@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import { logoutUser } from '../actions/authentication'
 import Login from './Login'
 import Register from './Register'
+import Fairy from '../gamelogic/fairy'
 import '../css/routes.css'
 
 class Routes extends Component {
@@ -58,6 +59,7 @@ class Routes extends Component {
             <Switch>
               <Route exact path="/login" component={ Login } />
               <Route exact path="/register" component={ Register } />
+              <Route exact path="/fairyland" component={ Fairy } />
             </Switch>
           </BrowserRouter>
         )

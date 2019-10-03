@@ -6,7 +6,7 @@
     "backtest": "cd backend && nodemon --exec 'mocha --require @babel/register -- recursive '",
     "test": "cd frontend && yarn test -- --coverage",
     "heroku-postbuild": "cd frontend && yarn && yarn run build",
-    "endtoend": "nightwatch ./E2Etest/nightwatch.tests.js"
+    "endtoend": "nightwatch --tags login"
   },
   "dependencies": {
     "axios": "^0.19.0",

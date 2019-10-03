@@ -25,6 +25,7 @@ nav li {
     display: inline-block;
     padding: 5px 5px;
 }
- .active {
-     color: red
+
+ div {
+     color: Purple
  }

@@ -52,7 +52,7 @@ class Register extends Component {
     }
 
     render() {
-        const { errors } = this.state; 
+        const { errors , name, email, password} = this.state; 
         return (
             <div className="container">
                 <form onSubmit={ this.handleSubmit }>
@@ -62,7 +62,7 @@ class Register extends Component {
                         'is-invalid': errors.name
                        })}
                       onChange ={this.handleInputChange }
-                         value={ this.state.name }  className="form-control"/>
+                         value={ name }  className="form-control"/>
                          {errors.name && (<div classnames="invalid-feedback">{errors.name}</div>)}
                     </div>
                     <div className="form-group">
@@ -71,7 +71,7 @@ class Register extends Component {
                             'is-invalid': errors.email
                            })}
                         onChange ={this.handleInputChange }
-                         value={ this.state.email } name="email" className="form-control"/>
+                         value={ email } name="email" className="form-control"/>
                          {errors.email && (<div classnames="invalid-feedback">{errors.email}</div>)}
                     </div>
                     <div className="form-group">
@@ -80,7 +80,7 @@ class Register extends Component {
                             'is-invalid': errors.password
                            })}
                         onChange ={this.handleInputChange }
-                         value={ this.state.password} name="password" className="form-control"/>
+                         value={ password} name="password" className="form-control"/>
                          {errors.password && (<div classnames="invalid-feedback">{errors.password}</div>)}
                     </div>
                     <div className="form-group">
