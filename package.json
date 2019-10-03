@@ -31,9 +31,5 @@
     "redux-test-utils": "^0.3.0",
     "validator": "^11.1.0"
   },
-  "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@babel/register": "^7.6.2"
-  }
+  "devDependencies": {}
 }
