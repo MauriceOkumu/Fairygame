@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `yarn dev`
 
-Runs the app in the development mode.<br>
+Fires up the server of the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
@@ -33,9 +33,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 This command will deploy the app to heroku
 
 
-### `nodemon`
+### `yarn start`
 
-Will fire up the server for API integration
+Run this command after you cd into the frontend folder to fire up the react frontend
 
 ### ` yarn endtoend` 
 
@@ -45,4 +45,4 @@ Will run the end to end and sanity tests
 ### ` yarn backtest` 
 Will run the db and model tests
 
-Make sure monodb is up and running in local for API intergration
+Make sure mongodb is up and running in local for API intergration
