@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Stage , Text} from '@inlet/react-pixi'
+import { style } from './gameStyles'
 
 class Fairy extends Component {
     constructor() {
@@ -10,9 +12,16 @@ class Fairy extends Component {
     }
     render () {
         const { user } = this.props.auth
+        const welcomeText = `Hello ${user.name}-Fairy`
+        const Welcome = () =><Text text={welcomeText} style={style} x={100}/>
         console.log('User =>', user)
         return (
-            <div>Hello {user.name}</div>
+            
+            <Stage width={1000} height={500} options={
+                { backgroundColor:  0x1099bb , antialias: true, interactive: true ,resolution: 1}
+                }>
+                <Welcome />
+             </Stage>
         )
     }
 }

@@ -12,7 +12,7 @@ class App extends Component {
   return (
     <div>
        <h2>Welcome</h2>
-      {/* <Routes /> */}
+      <Routes />
       </div>
   );
   }

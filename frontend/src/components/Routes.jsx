@@ -6,14 +6,15 @@ import { bindActionCreators } from 'redux';
 import { logoutUser } from '../actions/authentication'
 import Login from './Login'
 import Register from './Register'
+// import App from './App'
 import Fairy from '../gamelogic/fairy'
 import '../css/routes.css'
 
 class Routes extends Component {
     onLogout(e) {
-      e.preventDefault()
+      // e.preventDefault()
       console.log('Props', this.props)
-      this.props.logoutUser(this.props.history)
+     this.props.logoutUser(this.props.history)
   
     }
     render() {
@@ -27,6 +28,7 @@ class Routes extends Component {
           <li  className="nav-item">
                 <NavLink activeClassName="active" to="/fairyland">FairyLand</NavLink>
           </li>
+          
           <li></li>
           <li  className="nav-item">
             <NavLink exact activeClassName="active"  onClick={this.onLogout.bind(this)} to="/">Logout </NavLink>
