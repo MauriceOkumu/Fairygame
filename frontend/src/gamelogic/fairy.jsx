@@ -17,7 +17,7 @@ class Fairy extends Component {
         console.log('User =>', user)
         return (
             
-            <Stage width={1000} height={500} options={
+            <Stage width={window.innerWidth} height={window.innerHeight} options={
                 { backgroundColor:  0x1099bb , antialias: true, interactive: true ,resolution: 1}
                 }>
                 <Welcome />

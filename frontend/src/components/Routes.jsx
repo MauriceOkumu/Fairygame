@@ -20,9 +20,9 @@ class Routes extends Component {
       const authLinks = (
         <div>
           <ul className="navbar-nav ml-auto">
-          <li  className="nav-item">
-                <NavLink activeClassName="active" to="/cargame">Car Game</NavLink>
-          </li>
+          {/* <li  className="nav-item">
+                <NavLink activeClassName="active" to="/">Home</NavLink>
+          </li> */}
           <li  className="nav-item">
                 <NavLink activeClassName="active" to="/fairyland">FairyLand</NavLink>
           </li>
@@ -38,7 +38,7 @@ class Routes extends Component {
         const guestLinks = (
             <ul className="navbar-nav ml-auto">
                    <li className="nav-item">
-                     <NavLink exact activeClassName="active" to="/">Home</NavLink>
+                     <NavLink  activeClassName="active" to="/">Home</NavLink>
                   </li>
                   <li className="nav-item">
                     <NavLink activeClassName="active" to="/login">Login</NavLink>
@@ -51,7 +51,6 @@ class Routes extends Component {
         return (
             <BrowserRouter>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="#">Awesome</a>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     { isAuthenticated ? authLinks : guestLinks }
                 </div>
