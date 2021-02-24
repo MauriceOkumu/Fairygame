@@ -46,3 +46,5 @@ Will run the end to end and sanity tests
 Will run the db and model tests
 
 Make sure mongodb is up and running in local for API intergration
+
+Sanity test
