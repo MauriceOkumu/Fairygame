@@ -35,7 +35,7 @@ This command will deploy the app to heroku
 
 ### `yarn start`
 
-Run this command after you cd into the frontend folder to fire up the react frontend
+Run this command after you cd into the frontend folder to fire up the react frontend microservice
 
 ### ` yarn endtoend` 
 
